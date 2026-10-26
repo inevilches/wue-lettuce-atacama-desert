@@ -89,3 +89,26 @@ grafico_crecimiento <- ggplot(
 
 grafico_crecimiento
 
+
+
+ggsave(
+  filename = "plot/03-curva-crecimiento-lechugas.png",
+  plot = grafico_crecimiento,
+  width = 10,
+  height = 6,
+  units = "in",
+  dpi = 300
+)
+
+
+ggsave(
+  filename = "manuscrito/03-curva-crecimiento-lechugas.pdf",
+  plot = grafico_crecimiento,
+  width = 10,
+  height = 6,
+  units = "in"
+)
+
+
+
+
