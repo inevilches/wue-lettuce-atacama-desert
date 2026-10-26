@@ -100,3 +100,11 @@ ggsave(
   units = "in",
   dpi = 300
 )
+
+ggsave(
+  filename = "manuscrito/02-grafico-niebla-comparativo.pdf",
+  plot = grafico_niebla_comparativo,
+  width = 10,
+  height = 6,
+  units = "in"
+)
