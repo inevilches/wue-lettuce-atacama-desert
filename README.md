@@ -33,15 +33,21 @@ Pero existe una fuente de agua que no ha sido altamente considerada hasta el mom
 
 <h2>Captación de agua de niebla</h2>
 
-<p align="center">
-  <img src="plot/02-grafico-niebla-comparativo.png"
-       alt="Captación de agua de niebla"
-       width="55%">
+<table>
+  <tr>
+    <td width="60%">
+      <img src="plot/02-grafico-niebla-comparativo.png"
+           alt="Captación de agua de niebla"
+           width="100%">
+    </td>
+    <td width="40%">
+      <img src="images/05-atrapanieblas-chañaral.JPEG"
+           alt="Atrapanieblas en Chañaral"
+           width="100%">
+    </td>
+  </tr>
+</table>
 
-  <img src="plot/05-atrapanieblas-chañaral.jpg"
-       alt="Atrapanieblas en Chañaral"
-       width="40%">
-</p>
 
 
 
