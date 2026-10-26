@@ -29,6 +29,22 @@ Esta es la realidad de muchas localidades del Desierto de Atacama. Las condicion
 
 Pero existe una fuente de agua que no ha sido altamente considerada hasta el momento. El agua de niebla, o camanchaca, inunda por las noches la costa del desierto más árido del mundo, dejando tras su paso litros de agua que son posibles de capturar con el invento chileno donado a la UNESCO, el atrapanieblas. El proyecto Fondecyt 13220028, realizado entre 2023 y 2025, demostró que esta agua tiene condiciones de calidad aptas para la producción hidropónica. Gracias a este proyecto fue posible producir lechugas hidropónicas en invernaderos de bajo costo ubicados en dos localidades de la costa del Desierto de Atacama: Alto Patache, 70 km al sur de Iquique, y Falda Verde, Chañaral. Así, fue posible producir plantas con tan solo 3 L de agua por planta, cuando en producciones en suelo de la zona central esta cifra se mueve alrededor de los 100 L por planta.
 
+
+
+<h2>Captación de agua de niebla</h2>
+
+<p align="center">
+  <img src="plot/02-grafico-niebla-comparativo.png"
+       alt="Captación de agua de niebla"
+       width="55%">
+
+  <img src="plot/05-atrapanieblas-chañaral.jpg"
+       alt="Atrapanieblas en Chañaral"
+       width="40%">
+</p>
+
+
+
 Ahora tenemos una fuente de agua que, si bien no llevará a reemplazar el sistema actual, sí puede ayudar a complementarlo y así fortalecer la seguridad alimentaria de la zona. Pero seguimos estando en una zona de alta aridez, por lo que es necesario utilizarla con gran eficiencia. Entonces, ¿cuáles son las condiciones de producción que nos pueden llevar a maximizar la cantidad de kilos producidos por litro de agua? Eso es lo que busca dilucidar esta investigación. 
 
 Se busca aumentar la eficiencia del uso del agua en producciones de lechugas hidropónicas de un invernadero localizado en la costa de Tarapacá mediante la manipulación de la temperatura, radiación y déficit de presión de vapor. A través de distintos ambientes de un invernadero de bajo costo, tanto en invierno como en verano, se evaluará qué condiciones ambientales son las que llevan a una mayor producción de kilos por litro de agua bajo las condiciones ambientales de extrema aridez del desierto de Atacama. 
@@ -54,11 +70,17 @@ wue-lettuce-atacama-desert
       └── data-bibliografia-pib-sap.xlsx
       └── data-bibliografia-precipitaciones.xlsx
 ├── scripts/
-    ├── 01-analisis-exploratorio-1.R
-    ├── 02-xxxx.R
-    └── 03-xxxx.R
+    ├── 01-grafico-niebla.R
+    ├── 02-grafico-niebla-comparativo.R
+    └── 03-grafico-curva-crecimiento-lechugas.R
 └── plot/
-    └── 01-xxx.tiff
+    ├── 01-grafico-niebla.png
+    ├── 02-grafico-niebla-comparativo.png
+    └── 03-curva-crecimiento-lechugas.png
+└── manuscrito/
+    ├── 01-grafico-niebla.pdf
+    ├── 02-grafico-niebla-comparativo.pdf
+    └── 03-curva-crecimiento-lechugas.pdf
 ```
 
 
