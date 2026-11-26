@@ -1,19 +1,60 @@
 # wue-lettuce-atacama-desert
-Repositorio del análisis exploratorio de datos (simulados) de ambientes de invernadero de bajo costo en la costa del desierto de Atacama para el aumento de la eficiencia del uso del agua de lechugas producidas hidropónicamente con agua de niebla.
 
-> ## DISCLAIMER: este repositorio contiene datos que no son reales
-> Los datos contenidos en los documentos que inician como "data-raw" fueron creados con inteligencia artificial para trabajar los contenidos del curso. 
->
-> Los datos etiquetados como "data-bibliografia" fueron obtenidos de fuentes oficiales, tales como documentos gubernamentales o papers de investigación.
->
-> Al final de esta sección se detalla el prompt ingresado en Chat GPT para la obtención de los datos.
+### Análisis exploratorio del efecto de dos ambientes de invernadero de bajo costo en la costa del desierto de Atacama sobre la Eficiencia del Uso del Agua (WUE) en lechugas producidas hidropónicamente con agua de niebla.
 
-## Resumen
+> ## :warning: DISCLAIMER :warning:
+> ### :books: Sobre la creación de este repositorio
+> Este repositorio corresponde al trabajo final del curso **AGP3141 - Visualización de Datos Ambientales** de la Facultad de Agronomía y Sistemas Naturales de la Pontificia Universidad Católica de Chile, impartido por la profesora **Sara Acevedo**. 
+> Lo que se muestra aquí es la idea preliminar de la tesis de doctorado de **Inés Vilches**.
+>
+> ### :robot: Sobre los datos de este repositorio
+> Este repositorio contiene datos que no son reales.
+> Los datos contenidos en los documentos que inician como *"data-raw"* fueron **creados con inteligencia artificial**, específicamente con Chat GPT, para trabajar los contenidos del curso. 
+>
+> Los datos etiquetados como *"data-literature"* fueron obtenidos de fuentes oficiales, tales como documentos gubernamentales o papers de investigación.
+>
+> Al final de esta sección se detalla el prompt utilizado para la obtención de los datos.
+
+
+## :book: Resumen
 El Desierto de Atacama, si bien es el lugar más árido del planeta, cuenta con un recurso que podría cambiar la agricultura de esta zona: la niebla costera. 
 
 A partir de los resultados del proyecto Fondecyt 13220028 (2023-2025), donde se identificó la factibilidad de realizar cultivos hidropónicos con agua de niebla en Iquique y Chañaral, se propone estudiar cómo aumentar la eficiencia en el uso del agua para producir con este recurso en invernaderos localizados en la costa del Desierto de Atacama, donde confluyen condiciones de alta radiación y aridez. 
 
-## ¿Por qué sería importante producir en el desierto?
+
+## :file_folder: Estructura del repositorio
+```
+wue-lettuce-atacama-desert
+├── README.md
+├── data/
+│   └── data-raw/
+      └── data-raw-hobo-inside.xlsx
+      └── data-raw-hobo-outside.xlsx
+      └── data-raw-lettuce.xlsx
+      └── data-raw-pool.xlsx
+│   └── data-literature/
+      └── data-literature-food-insecurity.xlsx
+      └── data-literature-fog.xlsx
+      └── data-literature-pib-sap.xlsx
+      └── data-literature-precipitation.xlsx
+├── scripts/
+    ├── 01-plot-fog-comparative.R
+    ├── 02-plot-growth-curve-lettuce.R
+    └── 03-*(tbb)*
+└── plots/
+    ├── 01-plot-fog-comparative.png
+    ├── 02-plot-growth-curve-lettuce.png
+    └── 03-*(tbb)*
+└── images-/
+    ├── 01-shelf-jumbo-santiago1
+    ├── 02-shelf-jumbo-santiago2
+    └── 03-fogcollector-chañaral
+    └── 04-
+    └── 05-*(tbb)*
+
+```
+
+## :desert: ¿Por qué sería importante producir en el desierto?
 Pongámonos en el siguiente escenario. 
 
 Aprovechas una pequeña ventana de la universidad para ir a comprar una ensalada para tu almuerzo. Decides pasar desde el Campus San Joaquín al Jumbo, que está a dos estaciones de metro y te ofrece una gran variedad de dónde escoger. En el pasillo de las verduras ves una estantería repleta de lechugas, todas preciosas, pero una es notoriamente más pequeña que las demás e incluso se ve algo añeja. ¿Quién compraría esa lechuga, teniendo todas las demás disponibles? 
@@ -29,52 +70,57 @@ Esta es la realidad de muchas localidades del Desierto de Atacama. Las condicion
 
 Pero existe una fuente de agua que no ha sido altamente considerada hasta el momento. El agua de niebla, o camanchaca, inunda por las noches la costa del desierto más árido del mundo, dejando tras su paso litros de agua que son posibles de capturar con el invento chileno donado a la UNESCO, el atrapanieblas. El proyecto Fondecyt 13220028, realizado entre 2023 y 2025, demostró que esta agua tiene condiciones de calidad aptas para la producción hidropónica. Gracias a este proyecto fue posible producir lechugas hidropónicas en invernaderos de bajo costo ubicados en dos localidades de la costa del Desierto de Atacama: Alto Patache, 70 km al sur de Iquique, y Falda Verde, Chañaral. Así, fue posible producir plantas con tan solo 3 L de agua por planta, cuando en producciones en suelo de la zona central esta cifra se mueve alrededor de los 100 L por planta.
 
+
+
+<h2>Captación de agua de niebla</h2>
+
+**mapa de las zonas de estudio**
+
+<table>
+  <tr>
+    <td width="60%">
+      <img src="plot/02-grafico-niebla-comparativo.png"
+           alt="Captación de agua de niebla"
+           width="100%">
+    </td>
+    <td width="40%">
+      <img src="images/05-atrapanieblas-chañaral.JPEG"
+           alt="Atrapanieblas en Chañaral"
+           width="100%">
+    </td>
+  </tr>
+</table>
+
+
+**explicación de cómo se capta el agua y se usa en el invernadero con la foto explicativa y el brochure**
+
 Ahora tenemos una fuente de agua que, si bien no llevará a reemplazar el sistema actual, sí puede ayudar a complementarlo y así fortalecer la seguridad alimentaria de la zona. Pero seguimos estando en una zona de alta aridez, por lo que es necesario utilizarla con gran eficiencia. Entonces, ¿cuáles son las condiciones de producción que nos pueden llevar a maximizar la cantidad de kilos producidos por litro de agua? Eso es lo que busca dilucidar esta investigación. 
 
 Se busca aumentar la eficiencia del uso del agua en producciones de lechugas hidropónicas de un invernadero localizado en la costa de Tarapacá mediante la manipulación de la temperatura, radiación y déficit de presión de vapor. A través de distintos ambientes de un invernadero de bajo costo, tanto en invierno como en verano, se evaluará qué condiciones ambientales son las que llevan a una mayor producción de kilos por litro de agua bajo las condiciones ambientales de extrema aridez del desierto de Atacama. 
 
-## Preguntas exploratorias
+## :question: Preguntas exploratorias
 1. ¿Qué ambiente permite producir la mayor cantidad de kilos por litro de agua en lechuga hidropónica, sin perder calidad comercial, a los 28 días después de trasplante?
 2. El ambiente donde se produce la mayor eficiencia de agua gravimétrica a cosecha, ¿es el mismo donde se produce la mayor eficiencia del uso de agua fisiológica?
 3. ¿Cómo se modifica la Eficiencia en el Uso del Agua en los distintos ambientes a medida que las lechugas crecen en el invernadero?
 
-## Estructura del repositorio
-```
-wue-lettuce-atacama-desert
-├── README.md
-├── data/
-│   └── data-raw/
-      └── data-raw-hobo-inside.xlsx
-      └── data-raw-hobo-outside.xlsx
-      └── data-raw-lechugas.xlsx
-      └── data-raw-mesas.xlsx
-│   └── data-bibliografia/
-      └── data-bibliografia-inseguridad-alimentaria.xlsx
-      └── data-bibliografia-niebla.xlsx
-      └── data-bibliografia-pib-sap.xlsx
-      └── data-bibliografia-precipitaciones.xlsx
-├── scripts/
-    ├── 01-analisis-exploratorio-1.R
-    ├── 02-xxxx.R
-    └── 03-xxxx.R
-└── plot/
-    └── 01-xxx.tiff
-```
+### Análisis del uso eficiente de agua
 
+*curvas de crecimiento de lechuga
+*Eficiencia del Uso del Agua en distintos ambientes
 
-## Bibliografía
+## :books: Bibliografía
 - Albornoz, F.; del Río, C.; Carter, V.; Escobar, R.; Vásquez, L. Fog Water Collection for Local Greenhouse Vegetable Production in the Atacama Desert. Sustainability 2023, 15, 15720. https://doi.org/10.3390/su152215720
 - DGAC (2026). Anuario Meteorológico 2025. Dirección Meteorológica de Chile, Subdepto. Climatología y Met. Aplicada, Sección Climatología. https://climatologia.meteochile.gob.cl/publicaciones/anuario/anuario-2025.pdf 
 - ODEPA. (2026). Ficha regional: Región de Tarapacá. www.odepa.gob.cl
 - Yáñez, R., Navea, J., & Jara, B. (2023). Inseguridad alimentaria en Chile: una perspectiva multidimensional. https://rimisp.org/inseguridad-alimentaria-en-chile-una-perspectiva-multidimensional/
 
-## Prompt Chat GPT
+## :robot: Prompt Chat GPT
 Para mi análisis de Eficiencia en el Uso del Agua, necesitaba los siguientes datos:
-- Producción de lechuga (data-raw-lechugas).
-- Consumo de agua de las lechugas (data-raw-mesas).
+- Producción de lechuga (data-raw-lettuce).
+- Consumo de agua de las lechugas (data-raw-pool).
 - Datos ambientales de invernadero (data-raw-hobo-inside y data-raw-hobo-outside)
 
-### data-raw-lechugas
+### :leafy_green: data-raw-lettuce
 Como base, partí con una planilla excel donde yo asigné las columnas y la base de los datos de identificación:
 
 | Nombre columna | Significado | Valores |
@@ -82,7 +128,7 @@ Como base, partí con una planilla excel donde yo asigné las columnas y la base
 | # | ID de cada entrada, en número | 1-1792 |
 | ID | ID de cada entrada, en letras | a-bpx |
 | pool | Número de la piscina de producción | 1-8 |
-| season | Temporada de producción | invierno y verano |
+| season | Temporada de producción | winter - summer |
 | treatment | Tratamiento ambiental del invernadero | 1 y 2 |
 | rep | Repetición por tratamiento y temporada | 1 y 2 |
 | date-dat | Día después de trasplante | 1-28 |
@@ -124,7 +170,11 @@ Como base, partí con una planilla excel donde yo asigné las columnas y la base
 
 *Necesito que crees los datos para el tratamiento 2 considerando los valores que ya existen para el tratamiento 1, pero ahora con que existan diferencias entre el T1 y el T2 de entre un 25 y un 40%, obteniendo mayores diferencias en verano. Considera que T2>T1*
 
-### data-raw-mesas
+*Además, agrega diferencias entre las repeticiones para poder realizar barras de error. Las diferencias pueden ir entre un 1-35% y son aleatorias en su magnitud, no habiendo una relación de mayor/menor establecida como en el caso de los tratamientos.*
+
+*Por último, introduce algunos errores aleatorios a los datos de las mesas. Los errores se deberán a que el dato se saldrá de rango para los valores normales de una lechuga en al menos una cifra (por ejemplo, en vez de 20 gramos en una raíz, que diga 200, en vez de 200 de peso fresco de hojas, que diga 2000, etc).*
+
+### :droplet: data-raw-pool
 La base de los datos identificatorios siguió la misma lógica de la planilla data-raw-lechugas, solo con nuevos datos que eran exclusivos para el agua. 
 
 | Nombre columna | Significado | Valores |
@@ -132,7 +182,7 @@ La base de los datos identificatorios siguió la misma lógica de la planilla da
 | # | ID de cada entrada, en número | 1-1792 |
 | ID | ID de cada entrada, en letras | a-bpx |
 | pool | Número de la piscina de producción | 1-8 |
-| season | Temporada de producción | invierno y verano |
+| season | Temporada de producción | winter - summer |
 | treatment | Tratamiento ambiental del invernadero | 1 y 2 |
 | rep | Repetición por tratamiento y temporada | 1 y 2 |
 | date-dat | Día después de trasplante | 1-28 |
@@ -173,20 +223,22 @@ La base de los datos identificatorios siguió la misma lógica de la planilla da
 
 *-Debe existir variabilidad entre piscinas y repeticiones.*
 
+*Introduce algunos errores aleatorios a los datos de las mesas. En el caso del volumen, los errores se deberán a que el dato se saldrá de rango en al menos una cifra (por ejemplo, en vez de 20 litros, que diga 200). En el pH, el error pueden ser valores negativos o sobre 14. y en el Ce, la existencia de números negativos o por sobre 100.*
+
 *Como resultado, entrega una nueva planilla Excel con los datos completos de consumo diario de agua, manteniendo la estructura original.*
 
 
-### data-raw-hobo-inside y data-raw-hobo-outside
+### :house_with_garden: data-raw-hobo-inside y data-raw-hobo-outside
 
 Como base, las columnas de la planilla excel son las siguientes (los datos cambiaron a hobo_in o hobo_out dependiendo de si los datos meteorológicos son medidos dentro o fuera del invernadero):
 
 | Nombre columna | Significado | Valores |
 |---|---|---|
 | N° | ID de cada entrada, en número | 1-43776 |
-| fecha_hobo-in_iso| Fecha de cada dato | Desde mayo 2026 a febrero 2027 |
-| tiempo_hobo-in_hora | Hora de cada dato | Datos cada 10 minutos |
-| radiacion_hobo-in_umol-m2-s1 | Dato de sensor de radiación PAR | Indicado en el prompt |
-| temperatura_hobo-in_C | Dato de sensor de temperatura | Indicado en el prompt |
+| date_hobo-in_iso| Fecha de cada dato | Desde mayo 2026 a febrero 2027 |
+| time_hobo-in_HHmmss | Hora de cada dato | Datos cada 10 minutos |
+| radiation_hobo-in_umol-m2-s1 | Dato de sensor de radiación PAR | Indicado en el prompt |
+| temperature_hobo-in_C | Dato de sensor de temperatura | Indicado en el prompt |
 | hr_hobo-in_%  | Dato de sensor de humedad relativa | Indicado en el prompt |
 
 **Para los datos "Indicado en el prompt", esto fue lo indicado a Chat GPT:**
