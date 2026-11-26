@@ -86,7 +86,7 @@ Existe una fuente de agua que no ha sido altamente considerada hasta el momento.
            width="100%">
       </td>
     <td width="50%">
-      <img src="images/05-atrapanieblas-chañaral.JPEG"
+      <img src="images/04-atrapanieblas-chañaral.JPEG"
            alt="Atrapanieblas en Chañaral"
            width="100%">
     </td>
