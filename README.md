@@ -9,11 +9,14 @@
 >
 > ### :robot: Sobre los datos de este repositorio
 > Este repositorio contiene datos que no son reales.
+> 
 > Los datos contenidos en los documentos que inician como *"data-raw"* fueron **creados con inteligencia artificial**, específicamente con Chat GPT, para trabajar los contenidos del curso. 
 >
-> Los datos etiquetados como *"data-literature"* fueron obtenidos de fuentes oficiales, tales como documentos gubernamentales o papers de investigación.
+> Los datos etiquetados como *"data-literature"* fueron obtenidos de **fuentes oficiales**, tales como documentos gubernamentales o papers de investigación.
 >
 > Al final de esta sección se detalla el prompt utilizado para la obtención de los datos.
+>
+> El README, las figuras y los scripts están en español ya que la investigación se realizó en Chile, pero las carpetas y la estructura general están en inglés para un entendimiento general abierto a investigadores internacionales en colaboración. 
 
 
 ## :book: Resumen
@@ -54,7 +57,10 @@ wue-lettuce-atacama-desert
 
 ```
 
-## :desert: ¿Por qué sería importante producir en el desierto?
+## :desert: ¿Por qué es importante producir en el desierto?
+
+### *Problema principal*
+
 Pongámonos en el siguiente escenario. 
 
 Aprovechas una pequeña ventana de la universidad para ir a comprar una ensalada para tu almuerzo. Decides pasar desde el Campus San Joaquín al Jumbo, que está a dos estaciones de metro y te ofrece una gran variedad de dónde escoger. En el pasillo de las verduras ves una estantería repleta de lechugas, todas preciosas, pero una es notoriamente más pequeña que las demás e incluso se ve algo añeja. ¿Quién compraría esa lechuga, teniendo todas las demás disponibles? 
@@ -66,24 +72,20 @@ Aprovechas una pequeña ventana de la universidad para ir a comprar una ensalada
 
 Ahora te encuentras en Chañaral. No hay supermercado, por lo que para buscar tu lechuga debes ir la esquina donde "El Pino”, el caballero de las verduras, se para cada viernes junto a su camioneta con el pick-up abierto esperando a que escojas lo que quieres llevar de su selección. Ahora esa lechuga pequeña, notoriamente añeja y algo amarillenta es la mejor opción. El Pino te dice que es lo que quedó de su viaje a La Serena del lunes, después de haber vendido en Inca de Oro, Diego de Almagro y El Salado. Si quisieras otra cosa tendrías que ir al Unimarc que está en el pueblo vecino, Barquito, pero escuchaste que por un accidente en la ruta 5 no llegó la carga de la semana. 
 
-Esta es la realidad de muchas localidades del Desierto de Atacama. Las condiciones de extrema aridez no permiten el florecimiento de una agricultura local que abastezca al 7% de la población de Chile que vive allí. Así, los alimentos deben viajar desde otras localidades, pasando largas horas arriba de un camión antes de arribar a los consumidores. La fragilidad del sistema queda reflejada en la alta inseguridad alimentaria que sufre esta zona, en promedio 20,5%, a pesar de albergar las regiones de mayores ingresos dedicadas a la producción de cobre. 
+Esta es la realidad de muchas localidades del Desierto de Atacama. Las condiciones de extrema aridez no permiten el florecimiento de una agricultura local que abastezca al 7% de la población de Chile que vive allí. Así, los alimentos deben viajar desde otras localidades, pasando largas horas arriba de un camión antes de arribar a los consumidores. La fragilidad del sistema queda reflejada en la alta inseguridad alimentaria que sufre esta zona, en promedio 20,5%, a pesar de albergar las regiones de mayores ingresos dedicadas a la producción de cobre (Yáñez, et al. 2023). 
 
-Pero existe una fuente de agua que no ha sido altamente considerada hasta el momento. El agua de niebla, o camanchaca, inunda por las noches la costa del desierto más árido del mundo, dejando tras su paso litros de agua que son posibles de capturar con el invento chileno donado a la UNESCO, el atrapanieblas. El proyecto Fondecyt 13220028, realizado entre 2023 y 2025, demostró que esta agua tiene condiciones de calidad aptas para la producción hidropónica. Gracias a este proyecto fue posible producir lechugas hidropónicas en invernaderos de bajo costo ubicados en dos localidades de la costa del Desierto de Atacama: Alto Patache, 70 km al sur de Iquique, y Falda Verde, Chañaral. Así, fue posible producir plantas con tan solo 3 L de agua por planta, cuando en producciones en suelo de la zona central esta cifra se mueve alrededor de los 100 L por planta.
+### *Antecedentes*
 
-
-
-<h2>Captación de agua de niebla</h2>
-
-**mapa de las zonas de estudio**
+Existe una fuente de agua que no ha sido altamente considerada hasta el momento. El agua de niebla, o camanchaca, inunda por las noches la costa del desierto más árido del mundo, dejando tras su paso litros de agua que son posibles de capturar con el invento chileno donado a la UNESCO, el atrapanieblas. 
 
 <table>
-  <tr>
-    <td width="60%">
-      <img src="plot/02-grafico-niebla-comparativo.png"
-           alt="Captación de agua de niebla"
-           width="100%">
     </td>
-    <td width="40%">
+    <td width="50%">
+      <img src="images/08-niebla-patache.JPEG"
+           alt="Niebla en Alto Patache"
+           width="100%">
+      </td>
+    <td width="50%">
       <img src="images/05-atrapanieblas-chañaral.JPEG"
            alt="Atrapanieblas en Chañaral"
            width="100%">
@@ -92,26 +94,78 @@ Pero existe una fuente de agua que no ha sido altamente considerada hasta el mom
 </table>
 
 
-**explicación de cómo se capta el agua y se usa en el invernadero con la foto explicativa y el brochure**
+El proyecto Fondecyt 13220028, realizado entre 2023 y 2025, demostró que esta agua tiene condiciones de calidad aptas para la producción hidropónica. Gracias a este proyecto fue posible producir lechugas hidropónicas en invernaderos de bajo costo ubicados en dos localidades de la costa del Desierto de Atacama: Alto Patache, 70 km al sur de Iquique, y Falda Verde, Chañaral. Así, fue posible producir lechugas con tan solo 3 L de agua por planta, cuando en producciones en suelo de la zona central esta cifra se mueve alrededor de los 100 L por planta.
 
-Ahora tenemos una fuente de agua que, si bien no llevará a reemplazar el sistema actual, sí puede ayudar a complementarlo y así fortalecer la seguridad alimentaria de la zona. Pero seguimos estando en una zona de alta aridez, por lo que es necesario utilizarla con gran eficiencia. Entonces, ¿cuáles son las condiciones de producción que nos pueden llevar a maximizar la cantidad de kilos producidos por litro de agua? Eso es lo que busca dilucidar esta investigación. 
+Las siguientes fotografías muestran cómo funciona el invernadero y cómo se veía la producción en su interior:
 
-Se busca aumentar la eficiencia del uso del agua en producciones de lechugas hidropónicas de un invernadero localizado en la costa de Tarapacá mediante la manipulación de la temperatura, radiación y déficit de presión de vapor. A través de distintos ambientes de un invernadero de bajo costo, tanto en invierno como en verano, se evaluará qué condiciones ambientales son las que llevan a una mayor producción de kilos por litro de agua bajo las condiciones ambientales de extrema aridez del desierto de Atacama. 
+<table>
+    </td>
+    <td width="60%">
+      <img src="images/09-funcionamiento-invernadero.jpg"
+           alt="Diagrama funcionamiento invernadero"
+           width="100%">
+      </td>
+    <td width="40%">
+      <img src="images/10-invernadero-chañaral.JPEG"
+           alt="Foto interior invernadero Chañaral"
+           width="100%">
+    </td>
+  </tr>
+</table>
+
+
+A continuación es posible observar los sitios de estudios y la cantidad de agua captada a partir de la niebla en dichas localidades. La cantidad de agua captada se mide en litros por m² de malla. 
+El mapa de las localidades y de los litros de agua de niebla colectados se obtuvieron de Albornoz et al. (2023). 
+
+<table>
+    </td>
+    <td width="35%">
+      <img src="images/07-mapa-lugares-estudio.png"
+           alt="Mapa localidades invernadero de agua de niebla"
+           width="100%">
+      </td>
+    <td width="65%">
+      <img src="plot/02-grafico-niebla-comparativo.png"
+           alt="Captación de agua de niebla"
+           width="100%">
+    </td>
+  </tr>
+</table>
+
+Considerando estos antecedentes, tenemos una fuente de agua que, si bien no llevará a reemplazar el sistema actual, sí puede ayudar a complementarlo y así fortalecer la seguridad alimentaria de la zona. Pero seguimos estando en una zona de alta aridez, por lo que es necesario utilizarla con gran eficiencia. Entonces, ¿cuáles son las condiciones de producción que nos pueden llevar a maximizar la cantidad de kilos producidos por litro de agua? Eso es lo que busca dilucidar esta investigación. 
+
+### *Qué busca esta investigación*
+
+Buscamos aumentar la eficiencia del uso del agua en producciones de lechugas hidropónicas de un invernadero localizado en la costa de Tarapacá mediante la manipulación de la temperatura, radiación y déficit de presión de vapor. A través de distintos ambientes de un invernadero de bajo costo, tanto en invierno como en verano, se evaluará qué condiciones ambientales son las que llevan a una mayor producción de kilos por litro de agua bajo las condiciones ambientales de extrema aridez del desierto de Atacama. 
 
 ## :question: Preguntas exploratorias
-1. ¿Qué ambiente permite producir la mayor cantidad de kilos por litro de agua en lechuga hidropónica, sin perder calidad comercial, a los 28 días después de trasplante?
+1. ¿Qué ambiente permite producir la mayor cantidad de kilos por litro de agua en lechuga hidropónica a los 28 días después de trasplante?
 2. El ambiente donde se produce la mayor eficiencia de agua gravimétrica a cosecha, ¿es el mismo donde se produce la mayor eficiencia del uso de agua fisiológica?
 3. ¿Cómo se modifica la Eficiencia en el Uso del Agua en los distintos ambientes a medida que las lechugas crecen en el invernadero?
 
-### Análisis del uso eficiente de agua
+## :microscope: Resultados
 
-*curvas de crecimiento de lechuga
-*Eficiencia del Uso del Agua en distintos ambientes
+### Ambiente de invernadero
+
+### Eficiencia del Uso del Agua a los 28 días de trasplante
+Respondiendo la pregunta 1: 
+
+*¿Qué ambiente permite producir la mayor cantidad de kilos por litro de agua en lechuga hidropónica a los 28 días después de trasplante?*
+
+Conocida generalmente como la Eficiencia del Uso del Agua gravimétrica, analizamos en qué ambiente obtuvimos una mayor cantidad de kilos por litro de agua.
+
+### Comparación Eficiencia del Uso del Agua gravimétrica y fisiológica
+Respondiendo la pregunta 2: 
+
+*El ambiente donde se produce la mayor eficiencia de agua gravimétrica a cosecha, ¿es el mismo donde se produce la mayor eficiencia del uso de agua fisiológica?*
+
+### Evolución Eficiencia del Uso del Agua a partir del crecimiento de las lechugas
+Respondiendo la pregunta 3:
+
+*¿Cómo se modifica la Eficiencia en el Uso del Agua en los distintos ambientes a medida que las lechugas crecen en el invernadero?*
 
 ## :books: Bibliografía
-- Albornoz, F.; del Río, C.; Carter, V.; Escobar, R.; Vásquez, L. Fog Water Collection for Local Greenhouse Vegetable Production in the Atacama Desert. Sustainability 2023, 15, 15720. https://doi.org/10.3390/su152215720
-- DGAC (2026). Anuario Meteorológico 2025. Dirección Meteorológica de Chile, Subdepto. Climatología y Met. Aplicada, Sección Climatología. https://climatologia.meteochile.gob.cl/publicaciones/anuario/anuario-2025.pdf 
-- ODEPA. (2026). Ficha regional: Región de Tarapacá. www.odepa.gob.cl
+- Albornoz, F.; del Río, C.; Carter, V.; Escobar, R.; Vásquez, L. (2023). Fog Water Collection for Local Greenhouse Vegetable Production in the Atacama Desert. Sustainability, 15, 15720. https://doi.org/10.3390/su152215720
 - Yáñez, R., Navea, J., & Jara, B. (2023). Inseguridad alimentaria en Chile: una perspectiva multidimensional. https://rimisp.org/inseguridad-alimentaria-en-chile-una-perspectiva-multidimensional/
 
 ## :robot: Prompt Chat GPT
