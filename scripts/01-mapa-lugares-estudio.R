@@ -183,7 +183,7 @@ mapa_final <- mapa_principal +
 
 mapa_final
 
-# Guardar el mapa final
+# Guardar el mapa final en .png
 
 ggsave(
   filename = "plot/01-mapa-lugares-estudio.png",
@@ -192,5 +192,16 @@ ggsave(
   height = 7,
   units = "in",
   dpi = 300,
+  bg = "white"
+)
+
+# Guardar el mapa final en .pdf
+
+ggsave(
+  filename = "pdf/01-mapa-lugares-estudio.pdf",
+  plot = mapa_final,
+  width = 5,
+  height = 7,
+  units = "in",
   bg = "white"
 )
