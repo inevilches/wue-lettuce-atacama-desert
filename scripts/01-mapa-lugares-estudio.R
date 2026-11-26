@@ -75,7 +75,7 @@ mapa_principal <- ggplot() +
       y = latitude,
       label = location
     ),
-    size = 2.5,
+    size = 3,
     color = "grey20",
     box.padding = 0.5,
     point.padding = 0.5,
@@ -186,7 +186,7 @@ mapa_final
 # Guardar el mapa final
 
 ggsave(
-  filename = "images/07-mapa-lugares-estudio.png",
+  filename = "plot/01-mapa-lugares-estudio.png",
   plot = mapa_final,
   width = 5,
   height = 7,
