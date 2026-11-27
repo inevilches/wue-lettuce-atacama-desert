@@ -120,7 +120,7 @@ El mapa de las localidades y de los litros de agua de niebla colectados se obtuv
 <table>
     </td>
     <td width="35%">
-      <img src="images/07-mapa-lugares-estudio.png"
+      <img src="plot/01-mapa-lugares-estudio.png"
            alt="Mapa localidades invernadero de agua de niebla"
            width="100%">
       </td>
