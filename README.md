@@ -286,14 +286,14 @@ La base de los datos identificatorios siguió la misma lógica de la planilla da
 
 Como base, las columnas de la planilla excel son las siguientes (los datos cambiaron a hobo_in o hobo_out dependiendo de si los datos meteorológicos son medidos dentro o fuera del invernadero):
 
-| Nombre columna | Significado | Valores |
+| Nombre columna | Significado | Valores admitidos|
 |---|---|---|
-| N° | ID de cada entrada, en número | 1-43776 |
-| date_hobo-in_iso / date_hobo-out_iso| Fecha de cada dato | Desde mayo 2026 a febrero 2027 |
-| time_hobo-in_HHmmss / time_hobo-out_HHmmss| Hora de cada dato | Datos cada 10 minutos |
-| radiation_hobo-in_umol-m2-s1 / radiation_hobo-out_umol-m2-s1 | Dato de sensor de radiación PAR | Indicado en el prompt |
-| temperature_hobo-in_C / temperature_hobo-out_C | Dato de sensor de temperatura | Indicado en el prompt |
-| hr_hobo-in_% / hr_hobo-out_% | Dato de sensor de humedad relativa | Indicado en el prompt |
+| ID | ID de cada entrada | 1 - 43776, sin duplicados (sin NA) |
+| date_hobo-in_iso / date_hobo-out_iso| Fecha de cada dato formato ISO | Desde mayo 2026 a febrero 2027 (sin NA) |
+| time_hobo-in_HHmmss / time_hobo-out_HHmmss| Hora de cada dato | 00:00:00 a 23:50:00, cada 10 minutos (sin NA) |
+| radiation_hobo-in_umol-m2-s1 / radiation_hobo-out_umol-m2-s1 | Dato de sensor de radiación PAR | 0 - 2200 (sin NA) |
+| temperature_hobo-in_C / temperature_hobo-out_C | Dato de sensor de temperatura | 0 - 50 (sin NA) |
+| hr_hobo-in_% / hr_hobo-out_% | Dato de sensor de humedad relativa | 1 - 100 (sin NA) |
 
 **Para los datos "Indicado en el prompt", esto fue lo indicado a Chat GPT:**
 
