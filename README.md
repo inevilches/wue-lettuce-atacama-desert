@@ -147,6 +147,20 @@ Buscamos aumentar la eficiencia del uso del agua en producciones de lechugas hid
 
 ### Ambiente de invernadero
 
+El déficit de presión de vapor (DPV) nos indica qué tan demandante de agua se encuentra una atmósfera, provocando mayor transpiración en las plantas a medida que aumenta el déficit. Según la literatura, un DPV muy alto puede disminuir la Eficiencia en el Uso del Agua.
+
+Para analizar cómo los tratamientos dentro del invernadero afectaron el valor del DPV, partimos comparando el valor del DPV al exterior del invernadero en Alto Patache:
+
+<table>
+    </td>
+    <td width="35%">
+      <img src="plot/03-heatmap-dpv-outside.png"
+           alt="Heatmap DPV fuera del invernadero"
+           width="100%">
+    </td>
+  </tr>
+</table>
+
 ### Eficiencia del Uso del Agua a los 28 días de trasplante
 Respondiendo la pregunta 1: 
 
