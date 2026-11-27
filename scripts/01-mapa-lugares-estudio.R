@@ -75,7 +75,7 @@ mapa_principal <- ggplot() +
       y = latitude,
       label = location
     ),
-    size = 3,
+    size = 3.5,
     color = "grey20",
     box.padding = 0.5,
     point.padding = 0.5,
