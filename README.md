@@ -81,7 +81,7 @@ Existe una fuente de agua que no ha sido altamente considerada hasta el momento.
 <table>
     </td>
     <td width="50%">
-      <img src="images/08-niebla-patache.JPEG"
+      <img src="images/07-niebla-patache.JPEG"
            alt="Niebla en Alto Patache"
            width="100%">
       </td>
@@ -101,12 +101,12 @@ Las siguientes fotografías muestran cómo funciona el invernadero y cómo se ve
 <table>
     </td>
     <td width="60%">
-      <img src="images/09-funcionamiento-invernadero.jpg"
+      <img src="images/08-funcionamiento-invernadero.jpg"
            alt="Diagrama funcionamiento invernadero"
            width="100%">
       </td>
     <td width="40%">
-      <img src="images/10-invernadero-chañaral.JPEG"
+      <img src="images/09-invernadero-chañaral.JPEG"
            alt="Foto interior invernadero Chañaral"
            width="100%">
     </td>
