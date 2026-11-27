@@ -144,6 +144,54 @@ heatmap_dpv_outside <- ggplot(
     limits = c(0, 3),
     breaks = seq(0, 3, 0.5)
     ) +
+  # Delimitación de los tratamientos
+
+  annotate(
+    "segment",
+    x = c(0.6, 6.6),
+    xend = c(2.4, 8.4),
+    y = 24.2,
+    yend = 24.2,
+    colour = "#0072B2",
+    linewidth = 1
+  ) +
+  annotate(
+    "segment",
+    x = c(2.6, 8.6),
+    xend = c(4.4, 10.4),
+    y = 24.2,
+    yend = 24.2,
+    colour = "#E69F00",
+    linewidth = 1
+  ) +
+
+  # Etiquetas de los tratamientos
+
+  annotate(
+    "text",
+    x = c(1.5, 7.5),
+    y = 24.8,
+    label = "T1",
+    colour = "#0072B2"
+  ) +
+  annotate(
+    "text",
+    x = c(3.5, 9.5),
+    y = 24.8,
+    label = "T2",
+    colour = "#E69F00"
+  ) +
+
+  # Etiquetas de las temporadas
+
+  annotate(
+    "text",
+    x = c(2.5, 8.5),
+    y = 25.8,
+    label = c("Invierno", "Verano"),
+    fontface = "bold",
+    size = 3.5
+  ) +
   scale_x_discrete(
     labels = c(
       "May", "Jun", "Jul", "Ago",
@@ -162,10 +210,11 @@ heatmap_dpv_outside <- ggplot(
   scale_y_continuous(
     breaks = seq(0, 23, 3),
     labels = function(x) sprintf("%02d:00", x),
+    limits = c(-0.5, 28),
     expand = c(0, 0)
   ) +
   labs(
-    title = "Déficit de presión de vapor exterior invernadero",
+    title = "Déficit de Presión de Vapor exterior invernadero",
     subtitle = "Alto Patache | Mayo 2026 - Febrero 2027",
     x = NULL,
     y = NULL,
