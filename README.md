@@ -154,7 +154,7 @@ Para analizar cómo los tratamientos dentro del invernadero afectaron el valor d
 <table>
     </td>
     <td width="35%">
-      <img src="plot/03-heatmap-dpv-outside.png"
+      <img src="plot/03-heatmap-dpv-comparativo.png"
            alt="Heatmap DPV fuera del invernadero"
            width="100%">
     </td>
