@@ -412,8 +412,8 @@ heatmap_dpv_comparativo <- ggplot(
 
   # Títulos y etiquetas
   labs(
-    title = "Déficit de Presión de Vapor",
-    subtitle = "Alto Patache | Mayo 2026 - Febrero 2027",
+    title = "Déficit de Presión de Vapor - Alto Patache",
+    subtitle = "Exterior v/s Interior invernadero | Mayo 2026 - Febrero 2027",
     x = NULL,
     y = NULL,
     fill = "DPV (kPa)"
