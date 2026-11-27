@@ -76,7 +76,8 @@ mapa_principal <- ggplot() +
       label = location
     ),
     size = 4,
-    color = "grey20",
+    fontface = "bold",
+    color = "black",
     box.padding = 0.5,
     point.padding = 0.5,
     max.overlaps = Inf,
