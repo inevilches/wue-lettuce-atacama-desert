@@ -23,19 +23,19 @@ hobo_outside <- read_excel(
 diccionario_outside <- tribble(
   ~variable, ~tipo, ~valores_admitidos, ~admite_na,
 
-  "ID",
+  "id",
   "entero", "1-43776, sin duplicados", FALSE,
 
   "date_hobo-out_iso",
   "fecha", "2026-05-01 a 2027-02-28", FALSE,
 
-  "time_hobo-out_HHmmss",
+  "time_hobo-out_hhmmss",
   "hora", "00:00:00 a 23:50:00, cada 10 minutos", FALSE,
 
   "radiation_hobo-out_umol-m2-s1",
   "numérica", "0-2200", FALSE,
 
-  "temperature_hobo-out_C",
+  "temperature_hobo-out_c",
   "numérica", "0-50", FALSE,
 
   "hr_hobo-out_%",
@@ -62,7 +62,7 @@ validar_hobo_outside <- function(datos) {
   fechas_ok <- !anyNA(datos$`date_hobo-out_iso`)
 
   # Horas sin NA
-  time_ok <- !anyNA(datos$`time_hobo-out_HHmmss`)
+  time_ok <- !anyNA(datos$`time_hobo-out_hhmmss`)
 
 #Para radiación, temperatura y humedad relativa, validamos los registros del sensor
 
@@ -75,8 +75,8 @@ validar_hobo_outside <- function(datos) {
 
   # Temperatura: entre 0 y 50
   temperatura_ok <- all(
-    datos$`temperature_hobo-out_C` >= 0 &
-      datos$`temperature_hobo-out_C` <= 50,
+    datos$`temperature_hobo-out_c` >= 0 &
+      datos$`temperature_hobo-out_c` <= 50,
     na.rm = FALSE
   )
 
@@ -89,11 +89,11 @@ validar_hobo_outside <- function(datos) {
 
   marca <- function(x) ifelse(isTRUE(x), "OK", "FALLA")
 
-  cat("Fechas sin NA (integridad):", marca(fechas_ok), "\n")
-  cat("Horas sin NA (integridad):", marca(time_ok), "\n")
-  cat("Radiación 0-2200 (contenido):", marca(radiacion_ok), "\n")
-  cat("Temperatura 0-50 (contenido):", marca(temperatura_ok), "\n")
-  cat("Humedad relativa 1-100 (contenido):", marca(hr_ok), "\n")
+  cat("Fechas sin NA", marca(fechas_ok), "\n")
+  cat("Horas sin NA", marca(time_ok), "\n")
+  cat("Radiación 0-2200", marca(radiacion_ok), "\n")
+  cat("Temperatura 0-50", marca(temperatura_ok), "\n")
+  cat("Humedad relativa 1-100", marca(hr_ok), "\n")
 
 }
 
@@ -106,8 +106,8 @@ validar_hobo_outside(hobo_outside)
 dpv_outside <- hobo_outside %>%
   mutate(
     es = 0.6108 * exp(
-      (17.27 * `temperature_hobo-out_C`) /
-        (`temperature_hobo-out_C` + 237.3)
+      (17.27 * `temperature_hobo-out_c`) /
+        (`temperature_hobo-out_c` + 237.3)
     ),
     ea = es * (`hr_hobo-out_%` / 100),
     dpv = es - ea
@@ -122,7 +122,7 @@ all(dpv_outside$dpv >= 0, na.rm = FALSE)
 dpv_outside_prom_meshora <- dpv_outside %>%
   mutate(
     mes = floor_date(`date_hobo-out_iso`, unit = "month"),
-    hora = hour(`time_hobo-out_HHmmss`)
+    hora = hour(`time_hobo-out_hhmmss`)
   ) %>%
   group_by(mes, hora) %>%
   summarise(
